@@ -1,11 +1,16 @@
 import "./App.css";
-import axios from "axios";
-import ArticleCards from "../components/main/errors/article-cards/article-cards";
+import { Routes, Route } from "react-router-dom";
+import ArticleCards from "../components/main/article-cards/article-cards";
+import IndividualArticle from "../components/main/individual-article/individual-article";
 
 function App() {
   return (
     <>
-      <ArticleCards />
+      <h1>Fruitful Discussions</h1>
+      <Routes>
+        <Route path="/articles" element={<ArticleCards />} />
+        <Route path="/articles/:article_id" element={<IndividualArticle />} />
+      </Routes>
     </>
   );
 }

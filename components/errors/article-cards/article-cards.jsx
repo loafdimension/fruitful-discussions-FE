@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import allArticles from "../../../../api/api";
+import allArticles from "../../../api/api";
 import "./article-cards.css";
 
 function ArticleCards() {
