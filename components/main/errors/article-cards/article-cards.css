@@ -1,0 +1,50 @@
+.article-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  padding: 35px;
+}
+
+.article-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 4px 8px;
+  background-color: lavender;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+}
+
+.article-title {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: black;
+}
+
+.article-body {
+  font-size: 0.95rem;
+  color: black;
+}
+
+/* .article-image-url {
+
+}
+
+.article-topic {
+
+}
+
+.article-author {
+
+}
+
+.article-votes{
+
+}
+
+.article-comments{
+
+} */
