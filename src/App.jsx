@@ -8,7 +8,9 @@ function App() {
     <>
       <h1>Fruitful Discussions</h1>
       <Routes>
+        <Route path="/" element={<ArticleCards />} />
         <Route path="/articles" element={<ArticleCards />} />
+        <Route path="/home" element={<ArticleCards />} />
         <Route path="/articles/:article_id" element={<IndividualArticle />} />
       </Routes>
     </>
