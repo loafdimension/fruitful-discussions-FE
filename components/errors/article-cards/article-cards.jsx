@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import allArticles from "../../../api/api";
+import instance from "../../../api/api";
 import "./article-cards.css";
 
 function ArticleCards() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    allArticles(`/api/articles`)
+    instance(`/api/articles`)
       .then((response) => {
         console.log(response, "fetching all articles from my api");
         setArticles(response.data);

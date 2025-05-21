@@ -1,25 +1,12 @@
-import { useEffect, useState } from "react";
+import useArticle from "../../../custom-hooks/use-article";
 import { useParams } from "react-router-dom";
-import instance from "../../../api/api";
+import Comments from "./individual-article-elements/comments";
 
 function IndividualArticle() {
   const { article_id } = useParams();
-  const [article, setArticle] = useState(null);
+  const { article, error } = useArticle(article_id);
 
-  useEffect(() => {
-    instance(`/api/articles/${article_id}`)
-      .then((response) => {
-        console.log(response.data, "<<< individual article");
-        setArticle(response.data);
-      })
-      .catch((error) => {
-        console.log("Error", error);
-      });
-  }, [article_id]);
-
-  if (!article) {
-    return <p>ERROR</p>;
-  }
+  if (error || !article) return <p>Error loading article</p>;
 
   return (
     <div className="individual-article">
@@ -46,6 +33,7 @@ function IndividualArticle() {
         <strong>Comments: </strong>
         {article.comment_count}
       </p>
+      <Comments />
     </div>
   );
 }
