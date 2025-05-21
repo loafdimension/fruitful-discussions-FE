@@ -1,12 +1,16 @@
 import useArticle from "../../../custom-hooks/use-article";
 import { useParams } from "react-router-dom";
 import Comments from "./individual-article-elements/comments";
+import Votes from "./individual-article-elements/votes";
+import Loader from "../../loading/loading";
+import ErrorMessage from "../errors/errors";
 
 function IndividualArticle() {
   const { article_id } = useParams();
-  const { article, error } = useArticle(article_id);
+  const { article, error, isLoading } = useArticle(article_id);
 
-  if (error || !article) return <p>Error loading article</p>;
+  if (isLoading) return <Loader />;
+  if (error) return <ErrorMessage message={error} />;
 
   return (
     <div className="individual-article">
@@ -25,10 +29,7 @@ function IndividualArticle() {
         <strong>Posted by: </strong>
         {article.author}
       </p>
-      <p className="article-votes">
-        <strong>Votes: </strong>
-        {article.votes}
-      </p>
+      <Votes article_id={article_id} initialVotes={article.votes} />
       <p className="article-comments">
         <strong>Comments: </strong>
         {article.comment_count}
