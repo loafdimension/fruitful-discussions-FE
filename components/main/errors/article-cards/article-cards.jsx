@@ -23,11 +23,27 @@ function ArticleCards() {
           <div className="article-card" key={article.article_id}>
             <h2 className="article-title">{article.title}</h2>
             <p className="article-body">{article.body}</p>
-            <p className="article-image-url">{article.article_img_url}</p>
-            <p className="article-topic">{article.topic}</p>
-            <p className="article-author">{article.author}</p>
-            <p className="article-votes">{article.votes}</p>
-            <p className="article-comments">{article.comment_count}</p>
+            <img
+              className="article-image"
+              src={article.article_img_url}
+              alt={article.title}
+            />
+            <p className="article-topic">
+              <strong>Topic: </strong>
+              {article.topic}
+            </p>
+            <p className="article-author">
+              <strong>Posted by: </strong>
+              {article.author}
+            </p>
+            <p className="article-votes">
+              <strong>Votes: </strong>
+              {article.votes}
+            </p>
+            <p className="article-comments">
+              <strong>Comments: </strong>
+              {article.comment_count}
+            </p>
           </div>
         );
       })}
