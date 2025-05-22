@@ -6,7 +6,7 @@ import Votes from "./individual-article-elements/votes";
 import Loader from "../../loading/loading";
 import ErrorMessage from "../errors/errors";
 
-function IndividualArticle() {
+function IndividualArticle({user}) {
   const { article_id } = useParams();
   const { article, error, isLoading } = useArticle(article_id);
   const [commentCount, setCommentCount] = useState(0);
@@ -49,6 +49,7 @@ function IndividualArticle() {
         article_id={article_id}
         onIncrementCommentCount={incrementCommentCount}
         onDecrementCommentCount={decrementCommentCount}
+        user={user}
       />
     </div>
   );

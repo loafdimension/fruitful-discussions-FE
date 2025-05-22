@@ -5,7 +5,6 @@ function useComments(article_id) {
   const [comments, setComments] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  // const [triggerRefetch, setTriggerRefetch] = useState(0);
 
   useEffect(() => {
     setIsLoading(true);

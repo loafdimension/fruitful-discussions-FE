@@ -3,17 +3,22 @@ import instance from "../../../../api/api";
 
 function PostComment({
   article_id,
+  user,
   onOptimisticCommentSuccess,
   onOptimisticCommentFail,
+  onReplaceComment,
 }) {
   const [commentBody, setCommentBody] = useState("");
-  const [commentUser, setCommentUser] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!user || !user.username) {
+      setError("You must be logged in to post a comment.");
+      return;
+    }
     setLoading(true);
     setError(null);
     setSuccessMessage(null);
@@ -21,7 +26,7 @@ function PostComment({
     const temporary_id = Date.now();
     const optimisticComment = {
       temporary_id,
-      author: commentUser,
+      author: user.username, 
       body: commentBody,
       created_at: new Date().toISOString(),
     };
@@ -30,21 +35,24 @@ function PostComment({
       onOptimisticCommentSuccess(optimisticComment);
 
     setCommentBody("");
-    setCommentUser("");
 
     instance
       .post(`/api/articles/${article_id}/comments`, {
-        username: commentUser,
+        username: user.username, // use user.username here
         body: commentBody,
       })
       .then((result) => {
         setSuccessMessage("Comment posted!");
         setError(null);
         setLoading(false);
+
+        if (onReplaceComment) {
+          onReplaceComment(optimisticComment, result.data);
+        }
       })
       .catch((err) => {
         if (onOptimisticCommentFail) onOptimisticCommentFail(temporary_id);
-        setError("Something went wrong. Please try again")
+        setError("Something went wrong. Please try again");
         setLoading(false);
       });
   };
@@ -53,13 +61,6 @@ function PostComment({
     <div className="post-comment">
       <h4>Post a Comment</h4>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Your username"
-          value={commentUser}
-          onChange={(event) => setCommentUser(event.target.value)}
-          required
-        />
         <textarea
           placeholder="Write your comment here..."
           value={commentBody}
