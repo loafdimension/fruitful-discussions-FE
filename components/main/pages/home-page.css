@@ -1,0 +1,31 @@
+.home-container {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.topics-list {
+  min-width: 200px;
+}
+
+.topics-list h2 {
+  margin-bottom: 1rem;
+}
+
+.topics-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.topics-list li {
+  margin-bottom: 0.5rem;
+}
+
+.topics-list button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.articles-container {
+  flex: 1;
+}

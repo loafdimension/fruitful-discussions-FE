@@ -6,6 +6,7 @@ import IndividualArticle from "../components/main/individual-article/individual-
 import LogIn from "../components/header/log-in";
 import { useNavigate } from "react-router-dom";
 import TopicPage from "../components/main/topic/topic-page";
+import HomePage from "../components/main/pages/home-page";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -51,31 +52,12 @@ function App() {
         )}
       </div>
 
-      <div>
-        <h2>Topics</h2>
-        <ul>
-          {topics.map((topic) => {
-            return (
-              <li key={topic}>
-                <button
-                  onClick={() => {
-                    return navigate(`/topics/${topic}`);
-                  }}
-                >
-                  {topic}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
       {showLogIn && !user && <LogIn onLogin={handleLogin} />}
 
       <Routes>
-        <Route path="/" element={<ArticleCards />} />
-        <Route path="/articles" element={<ArticleCards />} />
-        <Route path="/home" element={<ArticleCards />} />
+        <Route path="/" element={<HomePage topics={topics} />} />
+        <Route path="/articles" element={<HomePage topics={topics} />} />
+        <Route path="/home" element={<HomePage topics={topics} />} />
         <Route
           path="/articles/:article_id"
           element={<IndividualArticle user={user} />}
