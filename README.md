@@ -15,14 +15,18 @@
 
 # About 📝
 
+**To be noted!**
+
+- I am yet to complete this project and have things in the [issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) to action so please bear that in mind.
+
 **What is Fruitful Discussions?**
 
 - Fruitful Discussions is a project I completed during the Northcoders bootcamp. It is a social news aggregation, web content rating and discussion website. Fruitful Discussions has articles which are divided into topics, and each article has user-curated ratings from upvotes and downvotes using the API. Users can also add comments about an article. It uses the seeded databases and API which was built in Fruitful Discussions BE.
 
 **How do I get access to the hosted version?**
 
-- [Fruitful-Discussions-FE (GitHub Repository)](https://github.com/loafdimension/fruitful-discussions-FE).
 - [Hosted Fruitful-Discussions-FE]().
+- [Fruitful-Discussions-BE (GitHub Repository)](https://github.com/loafdimension/fruitful-discussions-BE).
 
 ---
 
