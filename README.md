@@ -3,8 +3,12 @@
 # Table of Contents 📚
 
 - [About](#about)
+- [Live Demo](#live-demo)
 - [How to Install and Run](#how-to-install-and-run)
-- [Documentation](#documentation)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [API Documentation](#api-documentation)
+- [Future Features](#future-features)
 - [Feedback and Contributions](#feedback-and-contributions)
 - [Credits](#credits)
 - [Contact](#contact)
@@ -23,10 +27,27 @@
 
 - Fruitful Discussions is a project I completed during the Northcoders bootcamp. It is a social news aggregation, web content rating and discussion website. Fruitful Discussions has articles which are divided into topics, and each article has user-curated ratings from upvotes and downvotes using the API. Users can also add comments about an article. It uses the seeded databases and API which was built in Fruitful Discussions BE.
 
-**How do I get access to the hosted version?**
+**Key functionalities include:**
 
-- [Hosted Fruitful-Discussions-FE](https://fruitful-discussions.netlify.app/).
-- [Fruitful-Discussions-BE (GitHub Repository)](https://github.com/loafdimension/fruitful-discussions-BE).
+- **Article Browse:** Users can view articles divided into various topics.
+- **User-Curated Ratings:** Articles feature upvote and downvote functionality, leveraging the back-end API.
+- **Commenting System:** Users can add comments to articles and delete their own comments.
+
+Fruitful Discussions uses data from the [Fruitful Discussions BE API](https://github.com/loafdimension/fruitful-discussions-BE), which handles built the API, and handles any requests to it.
+
+---
+
+<a id="live-demo"></a>
+
+# Live Demo ✨
+
+Experience the hosted version of Fruitful Discussions Front-End here (via Netlify):
+
+- **[Hosted Fruitful-Discussions-FE](https://fruitful-discussions.netlify.app/)**
+
+You can also find the corresponding back-end repository here:
+
+- **[Fruitful-Discussions-BE (GitHub Repository)](https://github.com/loafdimension/fruitful-discussions-BE)**
 
 ---
 
@@ -34,27 +55,75 @@
 
 # How to Install and Run 🚀
 
-**1 - Ensure that you have the required versions of Node.js and Postgres**
+Follow these steps to get a local copy of Fruitful Discussions Front-End up and running on your machine.
 
-Verify that you have a compatible version of Node.js installed. The project was developed with the following version:
+**1 - Prerequisites**
 
-- Node.js: v22.14.0
+Ensure you have the following software installed:
 
-**2 - Fork and clone the repository**
+- **Node.js**: `v22.14.0`
+  - You can verify your Node.js version by running: `node -v`
+- **npm**: (Comes with Node.js)
+  - You can verify your npm version by running: `npm -v`
 
-Git clone: https://github.com/loafdimension/fruitful-discussions-FE.git
+**2 - Clone the Repository**
 
-**3 - Install the required dependencies**
+First, fork this repository to your GitHub account, then clone your forked repository to your local machine:
 
-Once inside the project directory, install the required dependencies from the package.json using `npm install`.
+```
+git clone [https://github.com/loafdimension/fruitful-discussions-FE.git](https://github.com/loafdimension/fruitful-discussions-FE.git)
+```
 
-## **INSERT MORE INFO HERE**
+**3 - Navigate to the Project Directory**
 
-<a id="documentation"></a>
+`cd fruitful-discussions-FE`
+`cd fruitful-discussions`
 
-# Documentation 🕮
+**4 - Install Dependencies**
+
+Install the dependencies inside the package json file
+`npm install`
+
+**3 - Start the Development Server**
+
+To run the application in development mode, run the following:
+`npm run dev`
+
+When this opens the VITE message, open the local host link.
+
+<a id="features"></a>
+
+# Features ✨
 
 **INSERT INFO HERE**
+
+---
+
+<a id="tech-stack"></a>
+
+# Tech Stack 💻
+
+**INSERT INFO HERE**
+
+---
+
+<a id="api-documentation"></a>
+
+# API Documentation 🕮
+
+**INSERT INFO HERE**
+
+---
+
+<a id="future-features"></a>
+
+# Future Features 🛣️
+
+As noted, this project is still under development, and I have plans for further enhancements. Here are some features I intend to implement:
+
+- insert here...
+
+You can track current and planned tasks, as well as contribute ideas, via the project's [issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) page.
 
 ---
 
