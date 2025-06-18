@@ -21,7 +21,8 @@
 
 **To be noted!**
 
-- I am yet to complete this project and have things in the [issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) to action so please bear that in mind.
+- I am yet to complete this project and have things in the [issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) to action so please bear that in mind!
+- You are welcome to check out the [Future Features](#future-features) section to see what I have planned.
 
 **What is Fruitful Discussions?**
 
