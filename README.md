@@ -21,12 +21,12 @@
 
 **To be noted!**
 
-- I am yet to complete this project and have things in the [issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) to action so please bear that in mind!
+- I am yet to complete this project and have things in the [Issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) to action so please bear that in mind!
 - You are welcome to check out the [Future Features](#future-features) section to see what I have planned.
 
 **What is Fruitful Discussions?**
 
-- Fruitful Discussions is a project I completed during the Northcoders bootcamp. It is a social news aggregation, web content rating and discussion website. Fruitful Discussions has articles which are divided into topics, and each article has user-curated ratings from upvotes and downvotes using the API. Users can also add comments about an article. It uses the seeded databases and API which was built in Fruitful Discussions BE.
+- Fruitful Discussions is a project I completed during the Northcoders bootcamp. It is a social news aggregation, web content rating and discussion website. Fruitful Discussions has articles which are divided into topics, and each article has user-curated ratings from upvotes and downvotes using the API. Users can also add comments about an article. It uses the seeded databases and API which was built in [Fruitful Discussions BE](https://github.com/loafdimension/fruitful-discussions-BE).
 
 **Key functionalities include:**
 
@@ -110,13 +110,13 @@ When this opens the VITE message, open the local host link.
 
 # Tech Stack 💻
 
-- Front-end Framework: React.js
-- Styling: Vanilla CSS
-- State Management: Reacts built in hooks (Use State)
-- Routing: React Router DOM
-- HTTP Client: Axios
-- Build Tool: Vite
-- Deployment: Netlify
+- **Front-end** Framework: React.js
+- **Styling**: Vanilla CSS
+- **State Management**: Reacts built in hooks (Use State)
+- **Routing**: React Router DOM
+- **HTTP Client**: Axios
+- **Build Tool**: Vite
+- **Deployment**: Netlify
 
 ---
 
