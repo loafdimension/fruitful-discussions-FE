@@ -25,7 +25,7 @@
 
 **How do I get access to the hosted version?**
 
-- [Hosted Fruitful-Discussions-FE]().
+- [Hosted Fruitful-Discussions-FE](https://fruitful-discussions.netlify.app/).
 - [Fruitful-Discussions-BE (GitHub Repository)](https://github.com/loafdimension/fruitful-discussions-BE).
 
 ---
