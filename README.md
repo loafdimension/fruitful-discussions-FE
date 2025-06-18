@@ -96,13 +96,13 @@ When this opens the VITE message, open the local host link.
 
 # Features ✨
 
-- View All Articles: Browse a list of all available articles.
-- Article Filtering by Topic: Filter articles by specific topics (e.g., coding, football, cooking).
-- Individual Article View: Access a dedicated page for each article to see full content and comments.
-- View Comments: Read comments associated with each article.
-- Vote on Articles: Upvote or downvote articles.
-- Post Comments: Add new comments to an article.
-- Delete Own Comments: Remove comments you have posted.
+- **View All Articles**: Browse a list of all available articles.
+- **Article Filtering by Topic**: Filter articles by specific topics (e.g., coding, football, cooking).
+- **Individual Article View**: Access a dedicated page for each article to see full content and comments.
+- **View Comments**: Read comments associated with each article.
+- **Vote on Articles**: Upvote or downvote articles.
+- **Post Comments**: Add new comments to an article.
+- **Delete Own Comments**: Remove comments you have posted.
 
 ---
 
@@ -110,7 +110,7 @@ When this opens the VITE message, open the local host link.
 
 # Tech Stack 💻
 
-- **Front-end** Framework: React.js
+- **Front-end**: Framework: React.js
 - **Styling**: Vanilla CSS
 - **State Management**: Reacts built in hooks (Use State)
 - **Routing**: React Router DOM
