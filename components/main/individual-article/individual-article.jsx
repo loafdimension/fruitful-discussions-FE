@@ -1,12 +1,27 @@
-import useArticle from "../../../custom-hooks/use-article";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import useArticle from "../../../custom-hooks/use-article";
 import Comments from "./individual-article-elements/comments";
+import Votes from "./individual-article-elements/votes";
+import Loader from "../../loading/loading";
+import ErrorMessage from "../errors/errors";
 
 function IndividualArticle() {
   const { article_id } = useParams();
-  const { article, error } = useArticle(article_id);
+  const { article, error, isLoading } = useArticle(article_id);
+  const [commentCount, setCommentCount] = useState(0);
 
-  if (error || !article) return <p>Error loading article</p>;
+  useEffect(() => {
+    if (article) setCommentCount(article.comment_count);
+  }, [article]);
+
+  const incrementCommentCount = () =>
+    setCommentCount((previousCount) => previousCount + 1);
+  const decrementCommentCount = () =>
+    setCommentCount((previousCount) => Math.max(0, previousCount - 1));
+
+  if (isLoading) return <Loader />;
+  if (error) return <ErrorMessage message={error} />;
 
   return (
     <div className="individual-article">
@@ -25,15 +40,16 @@ function IndividualArticle() {
         <strong>Posted by: </strong>
         {article.author}
       </p>
-      <p className="article-votes">
-        <strong>Votes: </strong>
-        {article.votes}
-      </p>
+      <Votes article_id={article_id} initialVotes={article.votes} />
       <p className="article-comments">
         <strong>Comments: </strong>
-        {article.comment_count}
+        {commentCount}
       </p>
-      <Comments />
+      <Comments
+        article_id={article_id}
+        onIncrementCommentCount={incrementCommentCount}
+        onDecrementCommentCount={decrementCommentCount}
+      />
     </div>
   );
 }
