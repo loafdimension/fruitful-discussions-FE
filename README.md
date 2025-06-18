@@ -96,7 +96,13 @@ When this opens the VITE message, open the local host link.
 
 # Features ✨
 
-**INSERT INFO HERE**
+- View All Articles: Browse a list of all available articles.
+- Article Filtering by Topic: Filter articles by specific topics (e.g., coding, football, cooking).
+- Individual Article View: Access a dedicated page for each article to see full content and comments.
+- View Comments: Read comments associated with each article.
+- Vote on Articles: Upvote or downvote articles.
+- Post Comments: Add new comments to an article.
+- Delete Own Comments: Remove comments you have posted.
 
 ---
 
@@ -104,7 +110,13 @@ When this opens the VITE message, open the local host link.
 
 # Tech Stack 💻
 
-**INSERT INFO HERE**
+- Front-end Framework: React.js
+- Styling: Vanilla CSS
+- State Management: Reacts built in hooks (Use State)
+- Routing: React Router DOM
+- HTTP Client: Axios
+- Build Tool: Vite
+- Deployment: Netlify
 
 ---
 
@@ -112,7 +124,9 @@ When this opens the VITE message, open the local host link.
 
 # API Documentation 🕮
 
-**INSERT INFO HERE**
+This front-end application interacts with the Fruitful Discussions Back-End API. You can find the full API documentation, including available endpoints and data structures, in its dedicated repository:
+
+- [Fruitful-Discussions-BE API Documentation](https://github.com/loafdimension/fruitful-discussions-BE?tab=readme-ov-file#documentation)
 
 ---
 
@@ -122,7 +136,16 @@ When this opens the VITE message, open the local host link.
 
 As noted, this project is still under development, and I have plans for further enhancements. Here are some features I intend to implement:
 
-- insert here...
+- Accessability (alt text, semantic HTML etc)
+- Enhanced Error Handling
+- Options to sort articles
+- View a separate page for each topic with a list of related articles
+- Improve User Experience (loading states, intuitive navigation etc)
+- Improved Styling (flex, grid, contrast checking, tailwind etc)
+- User Authentication
+- User Profiles
+- Pagination / Infinite Scrolling
+- Testing
 
 You can track current and planned tasks, as well as contribute ideas, via the project's [issues](https://github.com/loafdimension/fruitful-discussions-FE/issues) page.
 
