@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import instance from "../../../api/api";
-import "./article-cards.css";
 
 function ArticleCards() {
   const [articles, setArticles] = useState([]);
@@ -32,23 +31,26 @@ function ArticleCards() {
                 src={article.article_img_url}
                 alt={article.title}
               />
-              <p className="article-topic">
-                <strong>Topic: </strong>
-                {article.topic}
-              </p>
-              <p className="article-author">
-                <strong>Posted by: </strong>
-                {article.author}
-              </p>
-              <p className="article-votes">
-                <strong>Votes: </strong>
-                {article.votes}
-              </p>
-              <p className="article-comments">
-                <strong>Comments: </strong>
-                {article.comment_count}
-              </p>
+              <div className="article-info">
+                <p className="article-topic">
+                  <strong>Topic: </strong>
+                  {article.topic}
+                </p>
+                <p className="article-author">
+                  <strong>Posted by: </strong>
+                  {article.author}
+                </p>
+                <p className="article-votes">
+                  <strong>Votes: </strong>
+                  {article.votes}
+                </p>
+                <p className="article-comments">
+                  <strong>Comments: </strong>
+                  {article.comment_count}
+                </p>
+              </div>
             </div>
+            <button className="read-more-button">Read More</button>
           </Link>
         );
       })}
