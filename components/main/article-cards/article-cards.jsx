@@ -19,39 +19,37 @@ function ArticleCards() {
     <div className="article-cards-container">
       {articles.map((article) => {
         return (
-          <Link
-            to={`/articles/${article.article_id}`}
-            key={article.article_id}
-            className="article-card"
-          >
-            <div className="article-card" key={article.article_id}>
+          <div className="article-card" key={article.article_id}>
+            <div className="article-card-header-elements">
+              <p className="article-author">{article.author}</p>
               <h2 className="article-title">{article.title}</h2>
-              <img
-                className="article-image"
-                src={article.article_img_url}
-                alt={article.title}
-              />
-              <div className="article-info">
-                <p className="article-topic">
-                  <strong>Topic: </strong>
-                  {article.topic}
-                </p>
-                <p className="article-author">
-                  <strong>Posted by: </strong>
-                  {article.author}
-                </p>
-                <p className="article-votes">
-                  <strong>Votes: </strong>
-                  {article.votes}
-                </p>
-                <p className="article-comments">
-                  <strong>Comments: </strong>
-                  {article.comment_count}
-                </p>
-              </div>
+              <p className="article-topic">
+                <strong>{article.topic}</strong>
+              </p>
+              <Link
+                to={`articles/${article.article_id}`}
+                className="read-more-button"
+              >
+                <strong>Read More</strong>
+              </Link>
             </div>
-            <button className="read-more-button">Read More</button>
-          </Link>
+            <img
+              className="article-image"
+              src={article.article_img_url}
+              alt={article.title}
+            />
+            <div className="article-card-footer-icons">
+              <button className="article-comments">
+                <strong>Comments: </strong>
+                {article.comment_count}
+              </button>
+              <button className="article-votes">
+                <strong>Votes: </strong>
+                {article.votes}
+              </button>
+              <button className="share-button">Share</button>
+            </div>
+          </div>
         );
       })}
     </div>

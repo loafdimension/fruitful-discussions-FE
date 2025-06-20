@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 :root {
   --tea-green: #c6d8afff;
   --fulvous: #e28413ff;
@@ -18,6 +20,7 @@ body {
   background-color: whitesmoke;
 }
 
+/* APP */
 .page-header {
   display: flex;
   justify-content: center;
@@ -25,14 +28,6 @@ body {
   padding: 20px;
   background-color: var(--tea-green);
   width: 100vw;
-  border-radius: 8px;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-}
-
-.header-title {
-  color: var(--eggplant);
-  background-color: whitesmoke;
-  padding: 10px;
   border-radius: 8px;
 }
 
@@ -43,98 +38,140 @@ body {
   padding: 20px;
 }
 
+/* HEADER */
+.header-title {
+  color: var(--eggplant);
+  background-color: whitesmoke;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* ARTICLE CARDS */
 .article-cards-container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 35px;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 5px;
+  justify-items: center;
   width: 100%;
-  padding: 15px;
-  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .article-card {
-  display: flex; /* Changed to flex container for image and details side-by-side */
-  flex-direction: row; /* Arranges image and text container in a row */
-  align-items: flex-start; /* Aligns items to the top of the card */
-  gap: 20px; /* Space between the image and the article details */
-
-  background-color: rgb(79, 97, 70); /* Background color for the card */
-  padding: 20px; /* Padding inside the card */
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-  text-decoration: none; /* Remove underline from Link component */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
-  overflow: hidden; /* Ensures content doesn't overflow rounded corners */
-}
-
-.article-info {
+  width: 90%;
+  max-width: 500px;
+  height: 100%;
+  border: solid var(--tea-green);
+  border-radius: 20px;
+  padding: 15px;
+  padding-bottom: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.article-card-header-elements {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.article-author {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
 .article-title {
-  /* margin-top: 0; */
-  margin-bottom: 10px;
-  font-size: 1.25rem;
-  color: rgb(24, 24, 24);
-  line-height: 1.3;
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
 }
 
-.article-body {
-  font-size: 0.95rem;
-  color: black;
-  line-height: 1.5;
-  flex-grow: 1;
-  margin-bottom: 10px;
-}
-
-.article-image {
-  display: block;
-  /* Original size means no object-fit and height: auto */
-  width: 150px; /* Fixed width for the image to allow space for text beside it */
-  height: auto; /* Allow image height to adjust naturally */
-  max-width: 100%; /* Ensure it's responsive and doesn't break layout */
-  border-radius: 8px;
-  /* Removed margin-bottom as gap handles spacing between image and details now */
-  flex-shrink: 0; /* Prevent image from shrinking if content is too long */
-}
-
-/* New container for title, topic, author, votes, comments, and button */
-.article-content-wrapper {
-  display: flex;
-  flex-direction: column; /* Stack these items vertically */
-  flex-grow: 1; /* Allow this wrapper to take up remaining horizontal space */
-}
-
-.article-image {
-  display: Image;
-  height: 200px;
+.article-topic {
+  grid-column: 1;
+  grid-row: 3;
+  margin-top: 5px;
+  padding: 0;
+  line-height: 1.2;
 }
 
 .read-more-button {
-  display: inline-block; /* Allows padding and margin */
-  background-color: var(--tea-green); /* Button background */
-  color: black;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none; /* Remove underline */
-  text-align: center;
-  align-self: flex-end; /* Align button to the start of the column */
-  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: bold;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  background-color: var(--eggplant);
+  color: whitesmoke;
+  text-decoration: none;
+  border: solid black;
+  border-radius: 20px;
+  padding: 15px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .read-more-button:hover {
-  background-color: var(--dark-gray); /* Darker on hover */
-  transform: translateY(-2px); /* Slight lift on hover */
+  background-color: var(--fulvous);
+  transform: translateY(-2px);
 }
 
+.article-image {
+  margin-top: 5px;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.article-card-footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+  border: black;
+}
+
+.article-comments {
+  background-color: transparent;
+  border: 1px solid var(--fulvous);
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--eggplant);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.article-votes {
+  background-color: transparent;
+  border: 1px solid var(--fulvous);
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--eggplant);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.share-button {
+  background-color: transparent;
+  border: 1px solid var(--fulvous);
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--eggplant);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* INDIVIDUAL ARTICLE*/
 .individual-article {
   margin: 30px;
 }
