@@ -40,14 +40,17 @@ function ArticleCards() {
             />
             <div className="article-card-footer-icons">
               <button className="article-comments">
-                <strong>Comments: </strong>
-                {article.comment_count}
+                <img src="images/message-circle.svg" />
+                <strong className="comments-number">{article.comment_count}</strong>
               </button>
               <button className="article-votes">
-                <strong>Votes: </strong>
-                {article.votes}
+                <img src="images/thumbs-up.svg" />
+                <strong className="votes-number">{article.votes}</strong>
               </button>
-              <button className="share-button">Share</button>
+              <button className="share-button">
+                <img src="images/share-2.svg" />
+                <strong className="share-text">Share</strong>
+              </button>
             </div>
           </div>
         );
