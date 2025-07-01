@@ -24,27 +24,47 @@ function IndividualArticle() {
   if (error) return <ErrorMessage message={error} />;
 
   return (
-    <div className="individual-article">
-      <h2 className="article-title">{article.title}</h2>
-      <p className="article-body">{article.body}</p>
+    <div className="individual-article-container">
+      <div className="main-article-elements">
+        <p className="article-author">{article.author}</p>
+        <h2 className="article-title">{article.title}</h2>
+        <p className="article-topic">
+          <strong>{article.topic}</strong>
+        </p>
+        <p className="article-body">{article.body}</p>
+      </div>
+
       <img
         className="article-image"
         src={article.article_img_url}
         alt={article.title}
       />
-      <p className="article-topic">
-        <strong>Topic: </strong>
-        {article.topic}
-      </p>
-      <p className="article-author">
-        <strong>Posted by: </strong>
-        {article.author}
-      </p>
-      <Votes article_id={article_id} initialVotes={article.votes} />
+
+      <div className="article-footer-icons">
+        <button className="article-comments">
+          <img src="/images/message-circle.svg" />
+          <strong className="comments-number">{article.comment_count}</strong>
+        </button>
+        <button
+          className="article-votes"
+          article_id={article_id}
+          initialVotes={article.votes}
+        >
+          <img src="/images/thumbs-up.svg" />
+          <strong className="votes-number">{article.votes}</strong>
+        </button>
+        <button className="share-button">
+          <img src="/images/share-2.svg" />
+          <strong className="share-text">Share</strong>
+        </button>
+      </div>
+
+      {/* <Votes article_id={article_id} initialVotes={article.votes} />
       <p className="article-comments">
         <strong>Comments: </strong>
         {commentCount}
-      </p>
+      </p> */}
+
       <Comments
         article_id={article_id}
         onIncrementCommentCount={incrementCommentCount}

@@ -203,6 +203,46 @@ body {
 }
 
 /* INDIVIDUAL ARTICLE*/
-.individual-article {
-  margin: 30px;
+.individual-article-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-article-elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+/* .comments {
+} */
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* .comment {
+} */
+
+.add-comment{
+  background-color: var(--eggplant);
+  color: whitesmoke;
+  text-decoration: none;
+  border: solid black;
+  border-radius: 20px;
+  padding: 15px;
 }

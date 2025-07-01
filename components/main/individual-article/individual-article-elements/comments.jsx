@@ -41,24 +41,25 @@ function Comments({
   return (
     <div className="comments">
       <h3>Comments</h3>
+      <button className="add-comment">Post your comment here!</button>
       <ul className="comments-list">
         {comments.map((comment) => {
           return (
             <li key={comment.comment_id} className="comment">
               <p>
-                <strong>{comment.author}</strong>
+                <strong>{comment.author}</strong> •{" "}
+                {new Date(comment.created_at).toLocaleString()}
               </p>
               <p>{comment.body}</p>
-              <p>{new Date(comment.created_at).toLocaleString()}</p>
             </li>
           );
         })}
       </ul>
-      <PostComment
+      {/* <PostComment
         article_id={article_id}
         onOptimisticCommentSuccess={handleNewCommentOptimisticSuccess}
         onOptimisticCommentFail={handleNewCommentOptimisticFail}
-      />
+      /> */}
     </div>
   );
 }
