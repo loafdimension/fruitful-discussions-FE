@@ -223,6 +223,7 @@ body {
   justify-content: start;
   margin-top: 15px;
   margin-bottom: 15px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -238,11 +239,26 @@ body {
 /* .comment {
 } */
 
-.add-comment{
+.add-comment {
   background-color: var(--eggplant);
   color: whitesmoke;
   text-decoration: none;
   border: solid black;
   border-radius: 20px;
   padding: 15px;
+}
+
+.share-buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.share-buttons {
+  transition: transform 0.2s;
+}
+
+.share-button:hover {
+  transform: scale(1.1);
 }

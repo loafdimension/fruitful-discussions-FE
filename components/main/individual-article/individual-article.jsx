@@ -5,11 +5,21 @@ import Comments from "./individual-article-elements/comments";
 import Votes from "./individual-article-elements/votes";
 import Loader from "../../loading/loading";
 import ErrorMessage from "../errors/errors";
+import ShareButtons from "../share-buttons";
 
 function IndividualArticle() {
   const { article_id } = useParams();
   const { article, error, isLoading } = useArticle(article_id);
   const [commentCount, setCommentCount] = useState(0);
+  const [showShareButtons, setShowShareButtons] = useState(false);
+
+  const shareURL = `https://fruitful-discussions.netlify.app/${article_id}`;
+
+  function handleClickShare() {
+    setShowShareButtons(function (prev) {
+      return !prev;
+    });
+  }
 
   useEffect(() => {
     if (article) setCommentCount(article.comment_count);
@@ -53,11 +63,15 @@ function IndividualArticle() {
           <img src="/images/thumbs-up.svg" />
           <strong className="votes-number">{article.votes}</strong>
         </button>
-        <button className="share-button">
+        <button className="share-button" onClick={handleClickShare}>
           <img src="/images/share-2.svg" />
           <strong className="share-text">Share</strong>
         </button>
       </div>
+
+      {showShareButtons && (
+        <ShareButtons url={shareURL} title={article.title} />
+      )}
 
       {/* <Votes article_id={article_id} initialVotes={article.votes} />
       <p className="article-comments">
