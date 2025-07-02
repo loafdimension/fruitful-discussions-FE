@@ -158,6 +158,10 @@ body {
   height: 50px;
 }
 
+.article-comments:hover {
+  transform: scale(1.1);
+}
+
 .comments-number {
   align-self: center;
   justify-self: center;
@@ -178,6 +182,10 @@ body {
   height: 50px;
 }
 
+.article-votes:hover {
+  transform: scale(1.1);
+}
+
 .votes-number {
   align-self: center;
   justify-self: center;
@@ -195,6 +203,10 @@ body {
   gap: 3px;
   width: 80px;
   height: 50px;
+}
+
+.share-button:hover {
+  transform: scale(1.1);
 }
 
 .share-text {
@@ -253,12 +265,4 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 15px;
-}
-
-.share-buttons {
-  transition: transform 0.2s;
-}
-
-.share-button:hover {
-  transform: scale(1.1);
 }
