@@ -1,5 +1,5 @@
 function Title() {
-  return <h1 className="header-title">Fruitful Discussions!</h1>;
+  return <h1 className="header-title">FRUITFUL DISCUSSIONS</h1>;
 }
 
 export default Title;
