@@ -1,7 +1,13 @@
-import React from "react";
+import LogIn from "./header-elements/log-in";
+import Title from "./header-elements/title";
 
 function Header() {
-  return <h1 className="header-title">Fruitful Discussions!</h1>;
+  return (
+    <>
+      <Title />
+      <LogIn />
+    </>
+  );
 }
 
 export default Header;
