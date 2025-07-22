@@ -45,6 +45,7 @@ body {
   padding: 10px;
   border-radius: 8px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .log-in-button {
