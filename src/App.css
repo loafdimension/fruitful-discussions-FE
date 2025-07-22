@@ -44,6 +44,7 @@ body {
   background-color: whitesmoke;
   padding: 10px;
   border-radius: 8px;
+  text-decoration: none;
 }
 
 .log-in-button {
