@@ -1,11 +1,11 @@
-import LogIn from "./header-elements/log-in";
+import LogInButton from "./header-elements/log-in-button";
 import Title from "./header-elements/title";
 
 function Header() {
   return (
     <>
       <Title />
-      <LogIn />
+      <LogInButton />
     </>
   );
 }

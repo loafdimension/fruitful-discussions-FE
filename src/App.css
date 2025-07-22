@@ -55,6 +55,13 @@ body {
   padding: 15px;
   position: absolute;
   right: 400px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.log-in-button:hover {
+  background-color: var(--fulvous);
+  transform: translateY(-2px)
 }
 
 /* ARTICLE CARDS */
@@ -132,6 +139,7 @@ body {
   border-radius: 20px;
   padding: 15px;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .read-more-button:hover {
@@ -167,6 +175,7 @@ body {
   justify-content: center;
   width: 60px;
   height: 50px;
+  cursor: pointer;
 }
 
 .article-comments:hover {
@@ -191,6 +200,7 @@ body {
   justify-content: center;
   width: 60px;
   height: 50px;
+  cursor: pointer;
 }
 
 .article-votes:hover {
@@ -214,6 +224,7 @@ body {
   gap: 3px;
   width: 80px;
   height: 50px;
+  cursor: pointer;
 }
 
 .share-button:hover {
